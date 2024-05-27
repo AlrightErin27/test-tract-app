@@ -23,6 +23,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.navbar{
+  background-color: rgb(186, 131, 133);
+  width: 100vw;
+}
 
 /* .App-link-github {
   color: #61dafb;
@@ -38,4 +42,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.NavBar{
+  background-color: blue;
 }

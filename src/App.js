@@ -1,14 +1,14 @@
 
-import './App.css';
 import icon from "./images/icon.png"
 import githubIcon from "./images/github.png"
+import NavBar from "./components/NavBar.js"
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <header className="App-header">
-        
-          {/* <h3>Hello World!</h3> */}
+    
           <img src={icon} className="App-icon" alt="icon" />
         <a
           className="App-link-github"
