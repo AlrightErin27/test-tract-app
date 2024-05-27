@@ -1,19 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import icon from "./images/icon.png"
+import githubIcon from "./images/github.png"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          <h3>Hello World!</h3>
+        
+          {/* <h3>Hello World!</h3> */}
+          <img src={icon} className="App-icon" alt="icon" />
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="App-link-github"
+          href="https://github.com/AlrightErin27"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {/* Erin's Github */}
+          <img src={githubIcon} className="App-githubIcon" alt="github-icon" />
         </a>
       </header>
     </div>
