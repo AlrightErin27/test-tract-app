@@ -1,12 +1,15 @@
 
+import "./App.css"
+import Navbar from "./Navigation/Navbar"
+
 import icon from "./images/icon.png"
 import githubIcon from "./images/github.png"
-import NavBar from "./components/NavBar.js"
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Navbar />
       <header className="App-header">
     
           <img src={icon} className="App-icon" alt="icon" />
@@ -16,7 +19,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {/* Erin's Github */}
+    
           <img src={githubIcon} className="App-githubIcon" alt="github-icon" />
         </a>
       </header>
