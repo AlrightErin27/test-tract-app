@@ -1,0 +1,28 @@
+
+.Home {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.App-evbLogo {
+    height: 70vmin;
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .App-evbLogo {
+      animation: App-evbLogo-spin infinite 30s linear;
+    }
+  }
+  .App-githubLogo{
+    filter: invert(1);
+    height: 50px;
+  }
+  @keyframes App-evbLogo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

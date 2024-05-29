@@ -1,30 +1,34 @@
 
 import "./App.css"
-
-
-import icon from "./images/icon.png"
-import githubIcon from "./images/github.png"
-
+import Navbar from "./Navbar"
+import Home from "./pages/Home"
+import TicTacToe from "./pages/TicTacToe"
+import Game from "./pages/Game"
 
 function App() {
+
+  let component;
+
+  switch(window.location.pathname){
+    case "/":
+      component = <Home />;
+      break;
+    case "/tic-tac-toe":
+      component = <TicTacToe />;
+      break;
+    case "/game":
+      component = <Game />;
+      break;
+  };
   return (
     <div className="App">
-
-      <header className="App-header">
-    
-          <img src={icon} className="App-icon" alt="icon" />
-        <a
-          className="App-link-github"
-          href="https://github.com/AlrightErin27"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-    
-          <img src={githubIcon} className="App-githubIcon" alt="github-icon" />
-        </a>
-      </header>
+      
+      <Navbar />
+      <div className="container">
+      {component}
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App; 
