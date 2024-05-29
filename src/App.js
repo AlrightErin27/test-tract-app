@@ -1,6 +1,6 @@
 
 import "./App.css"
-import Navbar from "./Navigation/Navbar"
+
 
 import icon from "./images/icon.png"
 import githubIcon from "./images/github.png"
@@ -9,7 +9,7 @@ import githubIcon from "./images/github.png"
 function App() {
   return (
     <div className="App">
-      <Navbar />
+
       <header className="App-header">
     
           <img src={icon} className="App-icon" alt="icon" />
