@@ -1,25 +1,25 @@
+import { Link } from "react-router-dom"
 import "./styles.css"
 
 export default function Navbar(){
-    
     return <nav className="nav">
-        <a href="/" className="site-title">Home</a>
+        <Link to="/" >Home</Link>
         <ul>
-            <CustomLink href="/tic-tac-toe">Tic-Tac-Toe</CustomLink>
-            <CustomLink href="/game">Game</CustomLink>
+            <CustomLink to="/tic-tac-toe">Tic-Tac-Toe</CustomLink>
+            <CustomLink to="/game">Game</CustomLink>
         </ul>
     </nav>
 
 }
 
-function CustomLink({href, children, ...props}){
+function CustomLink({to, children, ...props}){
     const path = window.location.pathname;
     // console.log(path);
     return (
-        <li className={path === href ? "active" : ""}>
-            <a href={href} {...props}>
+        <li className={path === to ? "active" : ""}>
+            <Link to={to} {...props}>
                 {children}
-            </a>
+            </Link>
         </li>
     )
 }
