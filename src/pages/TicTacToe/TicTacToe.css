@@ -1,0 +1,61 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.tic-tac-toe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(180, 182, 55);
+  height: 100vh;
+  width: 100vw;
+}
+.board {
+  height: 45rem;
+  width: 45rem;
+  background-color: rgba(255, 255, 255, 0.127);
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  flex: 33%;
+  height: 100%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+}
+#sq0 {
+  background-color: red;
+}
+#sq1 {
+  background-color: red;
+}
+#sq2 {
+  background-color: red;
+}
+#sq3 {
+  background-color: red;
+}
+#sq4 {
+  background-color: red;
+}
+#sq5 {
+  background-color: red;
+}
+#sq6 {
+  background-color: red;
+}
+#sq7 {
+  background-color: red;
+}
+#sq8 {
+  background-color: red;
+}
