@@ -34,6 +34,7 @@ body {
   /* font-family: "Caveat Brush", cursive; */
   font-family: "Jaini", system-ui;
   font-size: 580%;
+  /* text-shadow: 8px 0 0 rgb(9, 76, 0); */
 }
 .x-style {
   color: rgb(234, 250, 13);
@@ -42,32 +43,32 @@ body {
   color: rgb(225, 255, 156);
 }
 #sq0 {
-  border-bottom: dashed rgb(9, 76, 0) 1rem;
-  border-right: dashed rgb(9, 76, 0) 1rem;
+  border-bottom: solid rgb(9, 76, 0) 1rem;
+  border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq1 {
-  border-bottom: dashed rgb(9, 76, 0) 1rem;
-  border-right: dashed rgb(9, 76, 0) 1rem;
+  border-bottom: solid rgb(9, 76, 0) 1rem;
+  border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq2 {
-  border-bottom: dashed rgb(9, 76, 0) 1rem;
+  border-bottom: solid rgb(9, 76, 0) 1rem;
 }
 #sq3 {
-  border-bottom: dashed rgb(9, 76, 0) 1rem;
-  border-right: dashed rgb(9, 76, 0) 1rem;
+  border-bottom: solid rgb(9, 76, 0) 1rem;
+  border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq4 {
-  border-bottom: dashed rgb(9, 76, 0) 1rem;
-  border-right: dashed rgb(9, 76, 0) 1rem;
+  border-bottom: solid rgb(9, 76, 0) 1rem;
+  border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq5 {
-  border-bottom: dashed rgb(9, 76, 0) 1rem;
+  border-bottom: solid rgb(9, 76, 0) 1rem;
 }
 #sq6 {
-  border-right: dashed rgb(9, 76, 0) 1rem;
+  border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq7 {
-  border-right: dashed rgb(9, 76, 0) 1rem;
+  border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq8 {
 }
