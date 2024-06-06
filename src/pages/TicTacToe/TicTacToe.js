@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./TicTacToe.css";
 
 import Square from "./Square";
+import Message from "./Message";
 import { WinningPatterns } from "./WinningPatterns";
 
 export default function TicTacToe() {
@@ -21,7 +22,11 @@ export default function TicTacToe() {
   }, [board]); //this fxn runs after everytime setBoard is used
 
   useEffect(() => {
-    if (result.gameState != "in-play") alert(`FIN! Winner: ${result.winner}`);
+    if (result.gameState != "in-play") {
+      // alert(`FIN! Winner: ${result.winner}`);
+
+      restartGame();
+    }
   }, [result]); //fxn runs when result has changed to !"in-play"
 
   //CHOOSE SQUARE
@@ -71,9 +76,16 @@ export default function TicTacToe() {
       }
     });
     if (filled) {
-      setResult({ winner: "no one", gameState: "cats" });
+      setResult({ winner: "Nobody", gameState: "cats" });
     }
   };
+  //RESTART GAME
+  const restartGame = () => {
+    setBoard(["", "", "", "", "", "", "", "", ""]);
+    setPlayer("O");
+  };
+
+  //MESSAGE
 
   return (
     <div>
@@ -149,9 +161,7 @@ export default function TicTacToe() {
             />
           </div>
         </div>
-        <text>Player: {player}</text>
-        <text>Game: {result.gameState}</text>
-        <text>Winner: {result.winner}</text>
+        <Message winner={result.winner} />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jaini&display=swap");
 
 body {
@@ -31,7 +30,6 @@ body {
   cursor: pointer;
   display: grid;
   place-items: center;
-  /* font-family: "Caveat Brush", cursive; */
   font-family: "Jaini", system-ui;
   font-size: 580%;
   /* text-shadow: 8px 0 0 rgb(9, 76, 0); */
@@ -71,4 +69,19 @@ body {
   border-right: solid rgb(9, 76, 0) 1rem;
 }
 #sq8 {
+}
+.message-blank {
+  color: transparent;
+}
+.message-filled {
+  color: transparent;
+  animation: fade-out 2s;
+}
+@keyframes fade-out {
+  20% {
+    color: #ffffff3a;
+  }
+  90% {
+    color: white;
+  }
 }
