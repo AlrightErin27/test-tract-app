@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./TicTacToe.css";
 
 import Square from "./Square";
-import Message from "./Message";
 import { WinningPatterns } from "./WinningPatterns";
 
 export default function TicTacToe() {
@@ -13,6 +12,10 @@ export default function TicTacToe() {
     winner: "none",
     gameState: "in-play",
   });
+  const [winningText, setWinningText] = useState(
+    <h1 className="message-blank">BLANK</h1>
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   //-------- USE EFFECT --------//
   useEffect(() => {
@@ -24,8 +27,9 @@ export default function TicTacToe() {
   useEffect(() => {
     if (result.gameState != "in-play") {
       // alert(`FIN! Winner: ${result.winner}`);
-
       restartGame();
+      setIsModalOpen(true);
+      console.log("Opened Modal");
     }
   }, [result]); //fxn runs when result has changed to !"in-play"
 
@@ -83,13 +87,29 @@ export default function TicTacToe() {
   const restartGame = () => {
     setBoard(["", "", "", "", "", "", "", "", ""]);
     setPlayer("O");
+    setWinningText(<h1 className="message-filled">{result.winner} wins!</h1>);
   };
 
-  //MESSAGE
+  //MODAL
+  const closeModal = () => {
+    setIsModalOpen(false);
+    console.log("CLOSED MODAL");
+  };
 
   return (
     <div>
       <div className="tic-tac-toe">
+        {isModalOpen ? (
+          <div className="modal">
+            {winningText}
+            <button className="modal-btn" onClick={closeModal}>
+              CLOSE
+            </button>
+          </div>
+        ) : (
+          <></>
+        )}
+
         <div className="board">
           <div className="row">
             <Square
@@ -161,7 +181,6 @@ export default function TicTacToe() {
             />
           </div>
         </div>
-        <Message winner={result.winner} />
       </div>
     </div>
   );

@@ -68,15 +68,16 @@ body {
 #sq7 {
   border-right: solid rgb(9, 76, 0) 1rem;
 }
-#sq8 {
-}
+/* #sq8 {
+} */
 .message-blank {
-  color: transparent;
+  color: rgb(9, 76, 0);
 }
 .message-filled {
-  color: transparent;
+  color: rgb(9, 76, 0);
   animation: fade-out 2s;
 }
+
 @keyframes fade-out {
   20% {
     color: #ffffff3a;
@@ -84,4 +85,27 @@ body {
   90% {
     color: white;
   }
+}
+.modal {
+  padding: 1rem 3rem 1rem 3rem;
+  position: absolute;
+  font-family: "Jaini", system-ui;
+  background-color: #bedb47;
+  border-radius: 13px;
+}
+.modal-btn {
+  background-color: #bedb47;
+  border: 1px solid rgb(9, 76, 0);
+  border-radius: 4px;
+  color: rgb(9, 76, 0);
+  cursor: pointer;
+  font-family: "Jaini", system-ui;
+  font-size: 2.5rem;
+  padding: 2px 25px;
+  transition: transform 150ms, box-shadow 150ms;
+}
+
+.modal-btn:hover {
+  box-shadow: rgb(9, 76, 0) 0 3px 9px 0;
+  transform: translateY(-2px);
 }
