@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Libre+Barcode+128+Text&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +8,7 @@ body {
 }
 .nav {
   background-color: rgba(0, 128, 0, 0);
+
   width: 100vw;
   color: white;
   display: flex;
@@ -13,9 +16,11 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  font-family: "Gemunu Libre", sans-serif;
+  font-size: 2rem;
 }
 .nav ul {
-  padding: 0;
+  padding: 8px;
   margin: 0;
   list-style: none;
   display: flex;
@@ -30,7 +35,8 @@ body {
   padding: 0.25rem;
 }
 .nav li.active {
-  background-color: rgba(255, 0, 0, 0.336);
+  background-color: rgba(255, 255, 255, 0.336);
+  padding: 0 5px 0 5px;
 }
 .nav li:hover {
   background-color: rgba(240, 254, 133, 0.588);

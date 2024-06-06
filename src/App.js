@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import Navbar from "./Navbar";
+import Navbar from "./pages/Navbar/Navbar";
 import Home from "./pages/Home";
 import TicTacToe from "./pages/TicTacToe/TicTacToe";
 import Game from "./pages/Game";
