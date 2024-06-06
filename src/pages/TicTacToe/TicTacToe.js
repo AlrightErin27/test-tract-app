@@ -29,7 +29,7 @@ export default function TicTacToe() {
       // alert(`FIN! Winner: ${result.winner}`);
       restartGame();
       setIsModalOpen(true);
-      console.log("Opened Modal");
+      // console.log("Opened Modal");
     }
   }, [result]); //fxn runs when result has changed to !"in-play"
 
@@ -93,7 +93,7 @@ export default function TicTacToe() {
   //MODAL
   const closeModal = () => {
     setIsModalOpen(false);
-    console.log("CLOSED MODAL");
+    // console.log("CLOSED MODAL");
   };
 
   return (
