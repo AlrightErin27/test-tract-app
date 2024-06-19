@@ -19,14 +19,56 @@ export default function TicTacToe() {
 
   //-------- USE EFFECT --------//
   useEffect(() => {
+    //CHECK IF WINNING PATTERN EXISTS
+    const checkWin = () => {
+      //loop through each pattern/arr
+      WinningPatterns.forEach((currPattern) => {
+        const playingPlayer = board[currPattern[0]];
+        if (playingPlayer === "") return;
+
+        let foundWinningPattern = true;
+
+        currPattern.forEach((idx) => {
+          if (board[idx] !== playingPlayer) {
+            foundWinningPattern = false;
+          }
+        });
+
+        if (foundWinningPattern) {
+          setResult({ winner: player, gameState: "won" });
+        }
+      });
+    };
     checkWin();
+    //CHECK IF TIE
+    const checkTie = () => {
+      let filled = true;
+
+      board.forEach((square) => {
+        if (square === "") {
+          filled = false;
+        }
+      });
+      if (filled) {
+        setResult({ winner: "Nobody", gameState: "cats" });
+      }
+    };
     checkTie();
-    player == "X" ? setPlayer("O") : setPlayer("X");
+    player === "X" ? setPlayer("O") : setPlayer("X");
   }, [board]); //this fxn runs after everytime setBoard is used
 
   useEffect(() => {
-    if (result.gameState != "in-play") {
+    if (result.gameState !== "in-play") {
       // alert(`FIN! Winner: ${result.winner}`);
+
+      //RESTART GAME
+      const restartGame = () => {
+        setBoard(["", "", "", "", "", "", "", "", ""]);
+        setPlayer("O");
+        setWinningText(
+          <h1 className="message-filled">{result.winner} wins!</h1>
+        );
+      };
       restartGame();
       setIsModalOpen(true);
       // console.log("Opened Modal");
@@ -41,53 +83,13 @@ export default function TicTacToe() {
       board.map((val, idx) => {
         //example) if someone clicks square1 it goes to the board arr index of 1 & IF its currently empty ("")->
         //then it the current players char is returned as the square's value (changing it from "" to either "X" or "O", which is displayed in Square.js)
-        if (idx == square && val == "") {
+        if (idx === square && val === "") {
           return player;
         }
         //if the value isn't changed the preset value "" is stilll displayed
         return val;
       })
     );
-  };
-
-  //CHECK IF WINNING PATTERN EXISTS
-  const checkWin = () => {
-    //loop through each pattern/arr
-    WinningPatterns.forEach((currPattern) => {
-      const playingPlayer = board[currPattern[0]];
-      if (playingPlayer == "") return;
-
-      let foundWinningPattern = true;
-
-      currPattern.forEach((idx) => {
-        if (board[idx] != playingPlayer) {
-          foundWinningPattern = false;
-        }
-      });
-
-      if (foundWinningPattern) {
-        setResult({ winner: player, gameState: "won" });
-      }
-    });
-  };
-  //CHECK IF TIE
-  const checkTie = () => {
-    let filled = true;
-
-    board.forEach((square) => {
-      if (square == "") {
-        filled = false;
-      }
-    });
-    if (filled) {
-      setResult({ winner: "Nobody", gameState: "cats" });
-    }
-  };
-  //RESTART GAME
-  const restartGame = () => {
-    setBoard(["", "", "", "", "", "", "", "", ""]);
-    setPlayer("O");
-    setWinningText(<h1 className="message-filled">{result.winner} wins!</h1>);
   };
 
   //MODAL
