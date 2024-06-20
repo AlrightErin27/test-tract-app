@@ -8,9 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 /* ---------------------- APP  ------------------- */
-/* .App {
-  
-} */
 .App {
   background-color: #5d7209;
   min-height: 100vh;
