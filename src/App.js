@@ -5,7 +5,7 @@ import Navbar from "./pages/Navbar/Navbar";
 import Home from "./pages/Home";
 import TicTacToe from "./pages/TicTacToe/TicTacToe";
 import Memory from "./pages/Memory/Memory";
-import Game from "./pages/Game";
+import Game from "./pages/TEST/Game";
 
 function App() {
   return (

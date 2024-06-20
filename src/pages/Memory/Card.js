@@ -1,5 +1,5 @@
 import "./Memory.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Card({ emoji, cardColor }) {
   const [faceDown, setFaceDown] = useState(true);
@@ -11,7 +11,9 @@ export default function Card({ emoji, cardColor }) {
           <div className="emoji-frame">{emoji}</div>
         </div>
       ) : (
-        <div className="up-card">FACE UP</div>
+        <div className="up-card" onClick={() => setFaceDown(true)}>
+          FACE UP
+        </div>
       )}
     </div>
   );
