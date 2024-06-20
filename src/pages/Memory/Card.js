@@ -7,7 +7,11 @@ export default function Card({ emoji, cardColor }) {
   return (
     <div className="Card">
       {faceDown === true ? (
-        <div className="down-card" style={{ backgroundColor: cardColor }}>
+        <div
+          className="down-card"
+          style={{ backgroundColor: cardColor }}
+          onClick={() => setFaceDown(false)}
+        >
           <div className="emoji-frame">{emoji}</div>
         </div>
       ) : (
