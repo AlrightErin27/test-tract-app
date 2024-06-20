@@ -57,7 +57,44 @@
   width: 15vw;
 }
 .Board {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   height: 75vh;
   width: 75vw;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  /* border: solid black 1px; */
+}
+.Card {
+  /* background-color: beige; */
+  height: 20rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.down-card {
+  height: 100%;
+  border: 6px rgba(0, 0, 0, 0.688) solid;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  font-size: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.down-card:hover {
+  filter: hue-rotate(30deg);
+}
+.emoji-frame {
+  border: 6px rgba(0, 0, 0, 0.688) solid;
+  background-color: rgba(255, 255, 255, 0.463);
+  border-radius: 12rem;
+  padding: 1rem;
 }
