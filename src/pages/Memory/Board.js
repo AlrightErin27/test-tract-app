@@ -15,7 +15,7 @@ export default function Board() {
 
   return (
     <div className="Board">
-      <div className="row">
+      <div className="board-row ">
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
@@ -23,7 +23,7 @@ export default function Board() {
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
       </div>
-      <div className="row">
+      <div className="board-row ">
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
         <Card emoji={stylesArr[idx][0]} cardColor={stylesArr[idx][1]} />
