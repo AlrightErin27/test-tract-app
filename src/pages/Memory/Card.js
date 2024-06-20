@@ -5,17 +5,13 @@ export default function Card({ emoji, cardColor }) {
   const [faceDown, setFaceDown] = useState(true);
 
   return (
-    <div className="Card">
+    <div className="Card" style={{ backgroundColor: cardColor }}>
       {faceDown === true ? (
-        <div
-          className="down-card"
-          style={{ backgroundColor: cardColor }}
-          onClick={() => setFaceDown(false)}
-        >
+        <div className="down-card" onClick={() => setFaceDown(false)}>
           <div className="emoji-frame">{emoji}</div>
         </div>
       ) : (
-        "face up"
+        <div className="up-card">FACE UP</div>
       )}
     </div>
   );
