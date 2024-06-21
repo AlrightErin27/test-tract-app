@@ -1,0 +1,48 @@
+.Concentration {
+  color: black;
+  height: 90vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.player-info {
+  height: 40rem;
+  width: 20rem;
+  background-color: rgba(128, 128, 128, 0.341);
+}
+.board {
+  height: 40rem;
+  padding: 1rem;
+  width: 90rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* border: black solid 1px; */
+  justify-content: flex;
+  align-items: flex-end;
+}
+.Card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  height: 15rem;
+  width: 10rem;
+  border: 5px rgba(0, 0, 0, 0.59) solid;
+  font-size: 4.5rem;
+  background-color: rgba(156, 4, 4, 0.671);
+}
+.face-down {
+  font-size: 15rem;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../images/EvbLogoTransparent.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

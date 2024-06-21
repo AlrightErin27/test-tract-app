@@ -10,10 +10,18 @@ body {
 /* ---------------------- APP  ------------------- */
 .App {
   background-color: #5d7209;
-  min-height: 100vh;
+  height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  margin: 0;
+}
+.app-row {
+  /* border: 1px black solid; */
 }
 .container {
   margin: 1rem;

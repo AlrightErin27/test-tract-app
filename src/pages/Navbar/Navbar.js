@@ -10,6 +10,7 @@ export default function Navbar() {
         <CustomLink to="/tic-tac-toe">Tic-Tac-Toe</CustomLink>
         <CustomLink to="/memory">Memory</CustomLink>
         <CustomLink to="/game">Game</CustomLink>
+        <CustomLink to="/concentration">Concentration</CustomLink>
       </ul>
     </nav>
   );

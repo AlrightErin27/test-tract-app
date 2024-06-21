@@ -8,7 +8,6 @@ body {
 }
 .nav {
   background-color: rgba(0, 128, 0, 0);
-
   width: 100vw;
   color: white;
   display: flex;
