@@ -19,10 +19,8 @@
   display: flex;
   justify-content: start;
   align-items: start;
-  /* flex-direction: row; */
   flex-wrap: wrap;
   gap: 1rem;
-  /* border: black solid 1px; */
   justify-content: flex;
   align-items: flex-end;
 }
